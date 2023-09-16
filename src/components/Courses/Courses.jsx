@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Course from '../Course/Course'
 import PropTypes from 'prop-types';
 
-const Courses = ({addthisCourse}) => {
+const Courses = ({addthisCourse, addCredits, addTotal}) => {
   const [courses, setCourses] = useState([]);
   useEffect( () => {
     fetch('courses.json')
@@ -13,7 +13,7 @@ const Courses = ({addthisCourse}) => {
     <div className='grid grid-cols-3 gap-8 -ml-24'>
       {
         courses.map( course =>
-          <Course key={course.id} course={course} addthisCourse= {addthisCourse}></Course>
+          <Course key={course.id} course={course} addthisCourse= {addthisCourse} addCredits={addCredits} addTotal={addTotal}></Course>
           )
           
       }
@@ -22,7 +22,9 @@ const Courses = ({addthisCourse}) => {
 };
 
 Courses.propTypes = {
-  addthisCourse: PropTypes.func
+  addthisCourse: PropTypes.func,
+  addCredits: PropTypes.func,
+  addTotal: PropTypes.func
 }
 
 export default Courses

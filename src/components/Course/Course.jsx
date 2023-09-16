@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { FiDollarSign  } from 'react-icons/fi';
 import { BsBook  } from 'react-icons/bs';
-const Course = ({ course, addthisCourse }) => {
+const Course = ({ course, addthisCourse, addCredits, addTotal }) => {
     const { title, cover, description, price, credit } = course;
     return (
         <div className="card  bg-base-100 shadow-xl">
@@ -22,8 +22,10 @@ const Course = ({ course, addthisCourse }) => {
                         <p className='text-gray-500 pb-3 text-justify'>Credit: {credit}hr</p>
                     </div>
                     </div>
-                <div className="card-actions">
-                    <button onClick={ () => addthisCourse(course)} className="btn btn-primary bg-blue-600 hover:bg-blue-400 text-white p-2 rounded-xl w-full">Select</button>
+                <div onClick={() => addCredits(credit)} className="card-actions">
+                    <div  onClick={() => addTotal(credit)}>
+                    <button onClick={ () => addthisCourse(course)}  className="btn btn-primary bg-blue-600 hover:bg-blue-400 text-white p-2 rounded-xl w-full">Select</button>
+                    </div>
                 </div>
             </div>
         </div>
