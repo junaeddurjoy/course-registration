@@ -11,13 +11,13 @@ function App() {
 
   const [creds, setCreds] = useState(20);
   const [total, setTotal] = useState(0);
-  var duplicate=0;
   const showToastMessage = (msg) => {
     toast.success(msg, {
         position: toast.POSITION.TOP_RIGHT
       });
 };
-  const addthisCourse = course =>{
+  const addthisCourse = (course) =>{
+    let duplicate=0;
           for(let i=0;i<credits.length;i++){
             if(credits[i]==course){
               duplicate++;
@@ -29,8 +29,6 @@ function App() {
           }
           else{
             setCredits(credits);
-            addCredits(0);
-            addTotal(0);
             showToastMessage('Course already added.');
           }
     }
@@ -49,7 +47,7 @@ function App() {
     }
   }
 
-  const addTotal = hours =>{
+  const addTotal = (hours) =>{
     const newTotal = total+hours;
     if(newTotal<=20){
       setTotal(newTotal);
