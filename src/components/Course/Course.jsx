@@ -23,7 +23,7 @@ const Course = ({ course, addthisCourse }) => {
                     </div>
                     </div>
                 <div className="card-actions">
-                    <button onClick={addthisCourse} className="btn btn-primary bg-blue-600 hover:bg-blue-400 text-white p-2 rounded-xl w-full">Select</button>
+                    <button onClick={ () => addthisCourse(course)} className="btn btn-primary bg-blue-600 hover:bg-blue-400 text-white p-2 rounded-xl w-full">Select</button>
                 </div>
             </div>
         </div>

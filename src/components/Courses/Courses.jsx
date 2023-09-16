@@ -13,8 +13,9 @@ const Courses = ({addthisCourse}) => {
     <div className='grid grid-cols-3 gap-8 -ml-24'>
       {
         courses.map( course =>
-          <Course key={course.id} course={course} addthisCourse = {addthisCourse}></Course>
+          <Course key={course.id} course={course} addthisCourse= {addthisCourse}></Course>
           )
+          
       }
     </div>
   )

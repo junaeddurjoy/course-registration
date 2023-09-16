@@ -5,18 +5,18 @@ import Credits from './components/Credits/Credits'
 import { useState } from 'react'
 
 function App() {
-  const [credit, setCredit] = useState([]);
+  const [credits, setCredits] = useState([]);
+
   const addthisCourse = course =>{
-    // const newCourse = [...credit, course];
-    // setCredit(newCourse);
-    console.log('kahini');
+    const newCourse = [...credits, course];
+    setCredits(newCourse);
   }
   return (
     <>
       <Header></Header>
       <div className='flex justify-around gap-6'>
         <Courses addthisCourse={addthisCourse}></Courses>
-        <Credits></Credits>
+        <Credits credits = {credits}></Credits>
       </div>
       
     </>
