@@ -6,7 +6,7 @@ const Course = ({ course, addthisCourse, addCredits, addTotal }) => {
     return (
         <div className="card  bg-base-100 shadow-xl">
             <figure className="px-2 pt-2 w-full">
-                <img src={cover} alt="Shoes" className="rounded-xl" />
+                <img src={cover} alt="" className="rounded-xl" />
             </figure>
             <div className="card-body items-center">
                 <h2 className="card-title text-xl font-semibold text-center pt-2">{title}</h2>
