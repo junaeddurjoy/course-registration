@@ -1,6 +1,7 @@
-const Credits = () => {
+const Credits = (credit) => {
   return (
     <div className="w-96 px-3 py-3">
+      <h1>{console.log(credit.length)}</h1>
       <div className="bg-base-100 shadow-xl -mr-24 text-left p-5">
         <h3 className="text-lg font-bold text-blue-500">Credit Hour Remaining: 20hr</h3>
         <hr />
